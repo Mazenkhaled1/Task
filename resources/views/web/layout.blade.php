@@ -20,6 +20,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap" rel="stylesheet">
+    {{-- <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"> --}}
+
     @yield('styles')
     <style>
     @font-face {
@@ -80,9 +82,7 @@
                                     <li><a class="menu-item" href="{{route('location')}}">الموقع</a></li>
                                     <li>
                                         <a class="menu-item" href="{{route('projects')}}">المشروعات</a>
-                                        <ul>
-                                            <li><a class="menu-item" href="projects.html">مشروع الدره ريزيدنس</a></li>
-                                        </ul>
+                                 
                                     </li>
                                     <li><a class="menu-item" href="{{route('about')}}">من نحن</a></li>
                                     <li><a class="menu-item" href="{{route('/')}}">الرئيسيه</a></li>

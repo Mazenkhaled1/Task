@@ -12,15 +12,15 @@
         <div id="top"></div>
 
         <section id="subheader" class="relative jarallax text-light">
-            <img src="{{asset('web/images/background/1.webp')}}" class="jarallax-img" alt="">
+            <img src="{{ asset('storage/' . $new->background_image) }}" class="jarallax-img" alt="">
             <div class="container relative z-index-1000">
                 <div class="row justify-content-center">
                     <div class="col-lg-6 text-center">
-                        <h1>الآخبار والمدونه</h1>
-                        <p class="lead mt-3">تابع اخر اخبار الدره</p>
+                        <h1>{{$new->title}}</h1>
+                        <p class="lead mt-3">{{$new->describtion}}</p>
                         <ul class="crumb">
-                            <li><a href="index.html">الرئيسيه</a></li>
-                            <li class="active">الاخبار والمدونه</li>
+                            <li><a href="{{route('/')}}">الرئيسيه</a></li>
+                            <li class="active">{{$new->title}}</li>
                         </ul>
                     </div>
                 </div>
@@ -30,24 +30,32 @@
         <section class="lines-deco">
             <div class="container">
                 <div class="row g-4">
+
                     <div class="col-lg-4 col-md-6">
+                        @foreach ($posts as $post)
                         <div>
                             <div class="post-image mb-3">
                                 <div class="d-tagline start-0 ps-3">
-                                    <span>الكاتيجوري</span>
+                                    <span>{{ $post->category }}</span>
                                 </div>
-                                <img alt="" src="{{asset('web/images/news/1.webp')}}" class="lazy">
+                                <img alt="" src="{{ asset('storage/' . $post->image) }}" class="lazy">
                             </div>
                             <div class="pt-2 h-100">
-                                <h4 style="text-align: right;" class="mb-3 lh-1-4"><a class="text-dark" href="news-single.html" >أحدث وحداتنا التطويرية بكفاءة أكبر.</a></h4>
-                                <p style="text-align: right;" class="mb-2">تتألق مجموعة الدرة ريزدنس كواحدة من رواد قطاع العقارات في الكويت . تعمل هذه الشركة على تقديم خدمات متكاملة في مجال العقارات </p>
+                                <h4 style="text-align: right;" class="mb-3 lh-1-4">
+                                    <!-- تعديل الرابط هنا ليأخذ id المنشور -->
+                                    <a class="text-dark" href="{{ route('news_single', $post->id) }}">{{ $post->title }}</a>
+                                </h4>
+                                <p style="text-align: right;" class="mb-2">{{ $post->description }}</p>
                                 <div style="text-align: right;" class="py-1">
-                                    <img src="{{asset('web/images/testimonial/1.jpg')}}" class="w-20px me-2 circle" alt="">
-                                    <div class="d-inline fs-14 fw-500 me-3">احمد كلرم</div>
-                                    <div class="d-inline fs-14 fw-500"><i class="icofont-ui-calendar id-color me-2"></i>18 Mar 2024</div>
-                                </div>
+                                    <img src="{{ asset('storage/' . $post->author_image) }}" class="w-20px me-2 circle" alt="">
+                                    <div class="d-inline fs-14 fw-500 me-3">{{ $post->author_name }}</div>
+                                    <div class="d-inline fs-14 fw-500">
+                                        <i class="icofont-ui-calendar id-color me-2"></i>{{ $post->created_at }}
+                                    </div>
+                                </div>  
                             </div>
                         </div>
+                        @endforeach
                     </div>
                     <!-- pagination begin -->
                     <div class="col-lg-12 pt-4 text-center">

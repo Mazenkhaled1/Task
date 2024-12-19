@@ -63,7 +63,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
             <a href="#" class="nav-link active">
               <i class="nav-icon fas fa-tachometer-alt"></i>
               <p>
-                ContactUs
+                ContactUs Pages
                 <i class="right fas fa-angle-left"></i>
               </p>
             </a>
@@ -83,33 +83,153 @@ scratch. This page gets rid of all links and provides the needed markup only.
             </ul>
           </li>
 
+            {{-- ------------------------------------------ --}}
 
           <li class="nav-item has-treeview menu-open">
             <a href="#" class="nav-link active">
               <i class="nav-icon fas fa-tachometer-alt"></i>
               <p>
-                Sample Pages
+                News Pages
                 <i class="right fas fa-angle-left"></i>
               </p>
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="#" class="nav-link active">
+                <a href="{{route('news.index')}}" class="nav-link active">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Page one</p>
+                  <p>News</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="#" class="nav-link">
+                <a href="{{route('posts.index')}}" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Page two</p>
+                  <p>New Single</p>
                 </a>
               </li>
             </ul>
           </li>
 
+            {{-- ------------------------------------------ --}}
+            <li class="nav-item has-treeview menu-open">
+              <a href="#" class="nav-link active">
+                <i class="nav-icon fas fa-tachometer-alt"></i>
+                <p>
+                  About_us
+                  <i class="right fas fa-angle-left"></i>
+                </p>
+              </a>
+              <ul class="nav nav-treeview">
+                <li class="nav-item">
+                  <a href="{{route('about_us_main.index')}}" class="nav-link active">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Main</p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="{{route('about_us_header.index')}}" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Header</p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="{{route('about_us_content.index')}}" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Content</p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="{{route('about_us_property.index')}}" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Property</p>
+                  </a>
+                </li>
+              </ul>
+            </li>
 
-
+            <li class="nav-item has-treeview menu-open">
+              <a href="#" class="nav-link active">
+                <i class="nav-icon fas fa-tachometer-alt"></i>
+                <p>
+                  HomePage
+                  <i class="right fas fa-angle-left"></i>
+                </p>
+              </a>
+              <ul class="nav nav-treeview">
+                <li class="nav-item">
+                  <a href="{{route('home_project.index')}}" class="nav-link active">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>projects</p>
+                  </a>
+                </li>
+                 <li class="nav-item">
+                  <a href="{{route('home_state.index')}}" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>State</p>
+                  </a>
+                </li>
+               <li class="nav-item">
+                  <a href="{{route('home_facility.index')}}" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Facilities</p>
+                  </a>
+               </li>
+                <li class="nav-item">
+                  <a href="{{route('home_image.index')}}" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Images</p>
+                  </a>
+                </li> 
+                <li class="nav-item">
+                  <a href="{{route('home_header.index')}}" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Header</p>
+                  </a>
+                </li> 
+              </ul>
+            </li>
+                {{-- ----------------- --}}
+            <li class="nav-item has-treeview menu-open">
+              <a href="#" class="nav-link active">
+                <i class="nav-icon fas fa-tachometer-alt"></i>
+                <p>
+                  Projects
+                  <i class="right fas fa-angle-left"></i>
+                </p>
+              </a>
+              <ul class="nav nav-treeview">
+                <li class="nav-item">
+                  <a href="{{route('project_header.index')}}" class="nav-link active">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Header</p>
+                  </a>
+                </li>
+                 <li class="nav-item">
+                  <a href="{{route('dura_project.index')}}" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Dura_Projects</p>
+                  </a>
+                </li>
+               <li class="nav-item">
+                  <a href="{{route('project_service.index')}}" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Services</p>
+                  </a>
+               {{-- </li>
+                <li class="nav-item">
+                  <a href="{{route('home_image.index')}}" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Images</p>
+                  </a>
+                </li> 
+                <li class="nav-item">
+                  <a href="{{route('home_header.index')}}" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Header</p>
+                  </a>
+                </li>  --}}
+              </ul>
+            </li>
+            
           <li class="nav-item">
             <a href="#" class="nav-link">
               <i class="nav-icon fas fa-th"></i>

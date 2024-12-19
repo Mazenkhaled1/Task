@@ -16,7 +16,7 @@ class ContactUs_PageController extends Controller
 
     public function edit($id)
     {
-        dd($id) ;
+        
         // جلب السجل المطلوب باستخدام الـ id
         $contact = Contact_Page::findOrFail($id);
         

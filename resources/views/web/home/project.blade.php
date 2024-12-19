@@ -12,15 +12,16 @@
 
             <div id="top"></div>
 
+              {{-- project_header --}}
             <section id="subheader" class="relative jarallax text-light">
-                <img src="{{asset('web/images/background/1.webp')}}" class="jarallax-img" alt="">
+                <img src="{{ asset('storage/' . $header->image) }}" class="jarallax-img" alt="">
                 <div class="container relative z-index-1000">
                     <div class="row justify-content-center">
                         <div class="col-lg-12 text-center">
-                            <h1>مشروع الدرة ريزيدنس: جوهرة الكويت الساطعة</h1>
+                            <h1>{{$header->title}}</h1>
                             <ul class="crumb">
-                                <li><a href="index.html">الرئيسيه</a></li>
-                                <li class="active">مشروع الدرة ريزيدنس: جوهرة الكويت الساطعة</li>
+                                <li><a href="{{route('/')}}">الرئيسيه</a></li>
+                                <li class="active">{{$header->sub_title}}</li>
                             </ul>
                             <div class="spacer-double"></div>
                         </div>
@@ -28,142 +29,74 @@
                 </div>
                 <div class="de-overlay"></div>
             </section>
+              {{-- end --}}
 
+              {{-- project_dura_project --}}
             <section style="padding: 40px 0 140px 0;">
                 <div class="container">
                     <div style="direction: rtl;" class="row g-4 align-items-center">
                         <div class="col-lg-6">
                             <div class="relative">
-                                <img src="{{asset('web/images/misc/7.webp')}}" class="w-100 pe-5 pb-5 wow scaleIn" alt="">
-                                <img src="{{asset('web/images/misc/6.webp')}}" class="w-50 abs end-0 bottom-0 z-2 wow scaleIn" data-wow-delay=".2s" alt="">
+                                <img src="{{ asset('storage/' . $dura_project->main_image) }}" class="w-100 pe-5 pb-5 wow scaleIn" alt="">
+                                <img src="{{ asset('storage/' . $dura_project->secondary_image	) }}" class="w-50 abs end-0 bottom-0 z-2 wow scaleIn" data-wow-delay=".2s" alt="">
                             </div>
                         </div>
                         <div class="col-lg-6">
                             <div class="ps-lg-3">
-                                <h2 class="wow fadeInUp" data-wow-delay=".4s">مشروع الدرة ريزيدنس: جوهرة الكويت الساطعة
+                                <h2 class="wow fadeInUp" data-wow-delay=".4s">{{$dura_project->title}}
                                 </h2>
                                 <p class="mb-0 wow fadeInUp" data-wow-delay=".6s">
-                                    مكان ينبض بالحياة، يدعو زائريه وسكانه للاستمتاع بتجربة لا تُنسى، حيث الفخامة ترتقي إلى مستويات عالمية، وحيث كل تفصيل صُمم بعناية ليعكس أرقى معايير الضيافة.
-                                    <br><br>
-بدأت رحلة "الدرة" برؤية طموحة تهدف إلى تقديم وجهة استثمارية فريدة تجمع بين الإطلالة البحرية الخلابة والعائد الاستثماري الواعد. ومع تطور هذا المشروع، استقبلت "الدرة" سكانها وعشاقها في مجتمع يتسم بالرقي، ليمثل مستقبلًا واعدًا لكل من ينضم إليه.
-<br><br>
-انضم إلى "الدرة"، حيث تجد الهدوء بجوار البحر، وتصبح جزءًا من قصة ملهمة تعيد تعريف الحياة العصرية المطلة على الخليج
-
+                                  {!! nl2br(e($dura_project->description)) !!}
                                 </p>
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
-            
-            <section style="background-color: #ac88675e" class="relative bg-light pt80 lines-deco">
-                <div class="container-fluid relative z-2">
-                    <div class="row g-4">
-                        <div class="col-lg-8 offset-lg-2 text-center">
-                            <div class="subtitle id-color wow fadeInUp mb-3">اكتشف</div>
-                            <h2 class="mb-0 wow fadeInUp">الخدمات والمرافق في الدره ريزيدنس</h2>
-                        </div>
-                        
-                        <div class="col-lg-12">
-                            <div class="owl-custom-nav menu-float px-5" data-target="#more-rooms">
-                                <a class="btn-next"></a>
-                                <a class="btn-prev"></a>                                
+            {{-- end --}}
 
-                                <div id="more-rooms" class="owl-3-cols owl-carousel owl-theme">
-                                    <!-- room begin -->
-                                    <div class="item">
-                                        <div class="hover relative text-light text-center wow fadeInUp" data-wow-delay=".3s">
-                                            <img src="{{asset('web/images/room/1.webp')}}" class="w-100 rounded-up-100" alt="">
-                                            <div class="abs hover-op-1 z-4 hover-mt-40 abs-centered">
-                                                <h3 class="fs-40 lh-1 mb-4">الخدمه الاولي</h3>
-                                                <div class="fs-14"> التفاصيل الكامله للخدمه الاولي</div>
-                                            </div>
-                                            <div class="abs bg-color z-2 top-0 w-100 h-100 hover-op-1 rounded-up-100"></div>
-                                            <div class="abs z-2 bottom-0 mb-3 w-100 text-center hover-op-0">
-                                                <h3 class="mb-0">الخدمه الاولي</h3>
-                                                <div class="text-center fs-14">
-                                                    <span class="mx-2">
-                                                        التفاصيل الكامله للخدمه الاولي
-                                                    </span>
-                                                </div>
-                                            </div>
-                                            <div class="gradient-trans-color-bottom abs w-100 h-40 bottom-0"></div>
-                                        </div>
-                                    </div>
-                                    <!-- room end -->
-                                                            
-                                    <!-- room begin -->
-                                    <div class="item">
-                                        <div class="hover relative text-light text-center wow fadeInUp" data-wow-delay=".3s">
-                                            <img src="{{asset('web/images/room/1.webp')}}" class="w-100 rounded-up-100" alt="">
-                                            <div class="abs hover-op-1 z-4 hover-mt-40 abs-centered">
-                                                <h3 class="fs-40 lh-1 mb-4">الخدمه الاولي</h3>
-                                                <div class="fs-14"> التفاصيل الكامله للخدمه الاولي</div>
-                                            </div>
-                                            <div class="abs bg-color z-2 top-0 w-100 h-100 hover-op-1 rounded-up-100"></div>
-                                            <div class="abs z-2 bottom-0 mb-3 w-100 text-center hover-op-0">
-                                                <h3 class="mb-0">الخدمه الاولي</h3>
-                                                <div class="text-center fs-14">
-                                                    <span class="mx-2">
-                                                        التفاصيل الكامله للخدمه الاولي
-                                                    </span>
-                                                </div>
-                                            </div>
-                                            <div class="gradient-trans-color-bottom abs w-100 h-40 bottom-0"></div>
-                                        </div>
-                                    </div>
-                                    <!-- room end -->
-                                    
-                                    <!-- room begin -->
-                                    <div class="item">
-                                        <div class="hover relative text-light text-center wow fadeInUp" data-wow-delay=".3s">
-                                            <img src="{{asset('web/images/room/1.webp')}}" class="w-100 rounded-up-100" alt="">
-                                            <div class="abs hover-op-1 z-4 hover-mt-40 abs-centered">
-                                                <h3 class="fs-40 lh-1 mb-4">الخدمه الاولي</h3>
-                                                <div class="fs-14"> التفاصيل الكامله للخدمه الاولي</div>
-                                            </div>
-                                            <div class="abs bg-color z-2 top-0 w-100 h-100 hover-op-1 rounded-up-100"></div>
-                                            <div class="abs z-2 bottom-0 mb-3 w-100 text-center hover-op-0">
-                                                <h3 class="mb-0">الخدمه الاولي</h3>
-                                                <div class="text-center fs-14">
-                                                    <span class="mx-2">
-                                                        التفاصيل الكامله للخدمه الاولي
-                                                    </span>
-                                                </div>
-                                            </div>
-                                            <div class="gradient-trans-color-bottom abs w-100 h-40 bottom-0"></div>
-                                        </div>
-                                    </div>
-                                    <!-- room end -->
+       <!-- resources/views/services/index.blade.php -->
+              {{-- services --}}
+<section style="background-color: #ac88675e" class="relative bg-light pt80 lines-deco">
+  <div class="container-fluid relative z-2">
+      <div class="row g-4">
+          <div class="col-lg-8 offset-lg-2 text-center">
+              <div class="subtitle id-color wow fadeInUp mb-3">اكتشف</div>
+              <h2 class="mb-0 wow fadeInUp">الخدمات والمرافق في الدره ريزيدنس</h2>
+          </div>
 
-                                    <!-- room begin -->
-                                    <div class="item">
-                                        <div class="hover relative text-light text-center wow fadeInUp" data-wow-delay=".3s">
-                                            <img src="{{asset('web/images/room/1.webp')}}" class="w-100 rounded-up-100" alt="">
-                                            <div class="abs hover-op-1 z-4 hover-mt-40 abs-centered">
-                                                <h3 class="fs-40 lh-1 mb-4">الخدمه الاولي</h3>
-                                                <div class="fs-14"> التفاصيل الكامله للخدمه الاولي</div>
-                                            </div>
-                                            <div class="abs bg-color z-2 top-0 w-100 h-100 hover-op-1 rounded-up-100"></div>
-                                            <div class="abs z-2 bottom-0 mb-3 w-100 text-center hover-op-0">
-                                                <h3 class="mb-0">الخدمه الاولي</h3>
-                                                <div class="text-center fs-14">
-                                                    <span class="mx-2">
-                                                        التفاصيل الكامله للخدمه الاولي
-                                                    </span>
-                                                </div>
-                                            </div>
-                                            <div class="gradient-trans-color-bottom abs w-100 h-40 bottom-0"></div>
-                                        </div>
-                                    </div>
-                                    <!-- room end -->
-                                </div>
-                            </div>
-                        </div>
-                        
-                    </div>
-                </div>
-            </section>
+          <div class="col-lg-12">
+              <div class="owl-custom-nav menu-float px-5" data-target="#more-rooms">
+                  <a class="btn-next"></a>
+                  <a class="btn-prev"></a>
+
+                  <div id="more-rooms" class="owl-3-cols owl-carousel owl-theme">
+                      @foreach($project_services as $project_service)
+                      <div class="item">
+                          <div class="hover relative text-light text-center wow fadeInUp" data-wow-delay=".3s">
+                              <img src="{{ asset('storage/' . $project_service->image) }}" class="w-100 rounded-up-100" alt="">
+                              <div class="abs hover-op-1 z-4 hover-mt-40 abs-centered">
+                                  <h3 class="fs-40 lh-1 mb-4">{{ $project_service->name }}</h3>
+                                  <div class="fs-14">{{ $project_service->description }}</div>
+                              </div>
+                              <div class="abs bg-color z-2 top-0 w-100 h-100 hover-op-1 rounded-up-100"></div>
+                              <div class="abs z-2 bottom-0 mb-3 w-100 text-center hover-op-0">
+                                  <h3 class="mb-0">{{ $project_service->name }}</h3>
+                                  <div class="text-center fs-14">
+                                      <span class="mx-2">{{ $project_service->description }}</span>
+                                  </div>
+                              </div>
+                              <div class="gradient-trans-color-bottom abs w-100 h-40 bottom-0"></div>
+                          </div>
+                      </div>
+                      @endforeach
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+{{-- end --}}
 
             <section style="margin: 100px 10% 0px 10%;" class="no-top no-bottom section-dark" aria-label="section">
                 <div style="margin-bottom: 20px" class="col-lg-8 offset-lg-2 text-center">
@@ -388,8 +321,9 @@
                 updateImage();
               });
             </script>
-
-            <section class="relative lines-deco">
+            
+               {{-- تواصل معنا --}}
+               <section class="relative lines-deco">
                 <div class="container">
                     <div class="row gx-5 align-items-center">
                         <div class="col-lg-6">
@@ -397,23 +331,24 @@
                                 <h3 class="mb-4">تواصل معنا</h3>
                             </div>
                             
-                            <form name="contactForm" id="contact_form" class="position-relative z1000" method="post" action="#">
+                            <form name="contactForm" id="contact_form" class="position-relative z1000" method="post" action="{{ route('contact.store') }}">
+                                @csrf
                                 <div class="row gx-4">
                                     <div class="col-lg-12 col-md-12 mb10">
                                         <div class="field-set">
                                             <input style="text-align: right;" type="text" name="Name" id="name" class="form-control" placeholder="الاسم" required>
                                         </div>
-
+                            
                                         <div class="field-set">
                                             <input style="text-align: right;" type="text" name="Email" id="email" class="form-control" placeholder="الايميل" required>
                                         </div>
-
+                            
                                         <div class="field-set">
                                             <input style="text-align: right;" type="text" name="phone" id="phone" class="form-control" placeholder="رقم الهاتف" required>
                                         </div>
                                         
                                         <div class="field-set">
-                                            <select style="text-align: right;" class="form-control">
+                                            <select style="text-align: right;" name="unit_type" class="form-control">
                                                 <option>نوع الوحده</option>
                                                 <option>الاول</option>
                                                 <option>الثاني</option>
@@ -423,48 +358,67 @@
                                     
                                     <div class="col-lg-12 col-md-12">
                                         <div class="field-set mb20">
-                                            <textarea style="text-align: right;"  name="message" id="message" class="form-control" placeholder="الرساله" required></textarea>
+                                            <textarea style="text-align: right;" name="message" id="message" class="form-control" placeholder="الرساله" required></textarea>
                                         </div>
                                     </div>
                                 </div>
-                                    
-                                
                                 <div class="text-center">
                                     <div id='submit' class="mt20 text-cen">
                                         <input type='submit' id='send_message' value='تواصل الآن' class="btn-main">
                                     </div>
                                 </div>
-
-                                <div id="success_message" class='success'>
-                                    Your message has been sent successfully. Refresh this page if you want to send more messages.
-                                </div>
-                                <div id="error_message" class='error'>
-                                    Sorry there was an error sending your form.
-                                </div>
+                            
+                                <!-- عرض رسالة النجاح -->
+                                @if(session('success'))
+                                    <div id="success_message" class="success">
+                                        {{ session('success') }}
+                                    </div>
+                                @endif
+                            
+                                <!-- عرض رسالة الخطأ (في حال وجود خطأ) -->
+                                @if($errors->any())
+                                    <div id="error_message" class="error">
+                                        <ul>
+                                            @foreach($errors->all() as $error)
+                                                <li>{{ $error }}</li>
+                                            @endforeach
+                                        </ul>
+                                    </div>
+                                @endif
                             </form>
 
                         </div>
 
                         <div class="col-lg-6" style="background-size: cover; background-repeat: no-repeat;">
                             <div class="row" style="background-size: cover; background-repeat: no-repeat;">
+                                @if($contact->secondary_images)
+                                @php
+                                    $secondaryImages = json_decode($contact->secondary_images);
+                                @endphp
+                                        @foreach ($secondaryImages as $index => $image)
+
                                 <div class="col-md-6" style="background-size: cover; background-repeat: no-repeat;">
                                     <div class="relative" style="background-size: cover; background-repeat: no-repeat;">
-                                        <img src="images/misc/9.webp" class="img-fluid wow fadeInUp animated" alt="" style="visibility: visible; animation-name: fadeInUp;">
+                                        <img src="{{ asset('storage/' . $image) }}" class="img-fluid wow fadeInUp animated" alt="" style="visibility: visible; animation-name: fadeInUp;">
                                     </div>
                                 </div>
 
-                                <div class="col-md-6" style="background-size: cover; background-repeat: no-repeat;">
-                                    <div class="spacer-single sm-hide" style="background-size: cover; background-repeat: no-repeat;"></div>
-                                    <div class="relative" style="background-size: cover; background-repeat: no-repeat;">
-                                        <img src="{{asset('web/images/misc/10.webp')}}" class="img-fluid wow fadeInUp animated" alt="" style="visibility: visible; animation-name: fadeInUp;">
-                                    </div>
-                                </div>
-                            </div>
+                                @if($index % 2 != 0) 
+                            </div><div class="row" style="background-size: cover; background-repeat: no-repeat;">
+                        @endif
+                    @endforeach
+                @else
+                    <!-- إذا لم تكن هناك صور ثانوية -->
+                    <span>No secondary images available</span>
+                @endif
+            </div>
+        </div>
                         </div>
                         
                     </div>
                 </div>
             </section>
+            {{-- خلصت --}}
             
         </div>
         <!-- content close -->
